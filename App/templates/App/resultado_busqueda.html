@@ -1,0 +1,13 @@
+{% if cursos_encontrados %}
+Estos son los cursos encontrados: 
+<ul>
+{% for curso in cursos_encontrados %}
+    <li>{{curso.nombre}} (comision {{curso.comision}})</li>
+{% endfor %}
+</ul>
+
+{% else %}
+
+No se encontro curso con ese numero de comision 
+
+{% endif %}
